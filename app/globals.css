@@ -1,0 +1,69 @@
+@import "tailwindcss";
+
+:root {
+  --background: #050708;
+  --foreground: #f2f5f4;
+  --accent: #14cc6f;
+  --accent-strong: #0fa75b;
+  --muted: #8a938f;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-accent: var(--accent);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), "Inter", system-ui, -apple-system,
+    BlinkMacSystemFont, "Segoe UI", sans-serif;
+  min-height: 100vh;
+  letter-spacing: 0.01em;
+}
+
+::selection {
+  background: rgba(33, 241, 144, 0.25);
+  color: #050708;
+}
+
+.global-bg {
+  min-height: 100vh;
+  background: var(--background);
+}
+
+.hero-card {
+  background: #0d1014;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.header-shell {
+  background: #080a0d;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.stat-card {
+  background: #090b0f;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.pill-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  border-radius: 999px;
+  padding: 0.35rem 1.25rem;
+  font-size: 0.85rem;
+  letter-spacing: 0.35em;
+  background: #080a0d;
+  border: 1px solid rgba(20, 204, 111, 0.5);
+  color: var(--foreground);
+}
+
+.panel-dark {
+  background: #080a0d;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+}
