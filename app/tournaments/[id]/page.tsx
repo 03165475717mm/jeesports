@@ -102,7 +102,6 @@ export default function TournamentDetailPage() {
         userName: currentUser.displayName || currentUser.email?.split("@")[0] || "Player",
         userEmail: currentUser.email || "",
         tournamentId: tournament.id,
-        registrationTime: new Date()
       });
       
       // Update local state

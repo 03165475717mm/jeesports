@@ -130,6 +130,7 @@ export default function AdminPage() {
       await createTournament({
         ...formData,
         startTime: new Date(formData.startTime),
+        status: "upcoming",
       });
       
       // Reset form

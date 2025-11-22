@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useMemo, useState } from "react";
+import { Suspense, useEffect, useMemo, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { CalendarClock, Coins, Filter, Search, Users } from "lucide-react";
 
@@ -16,6 +16,20 @@ const filters = [
 ];
 
 export default function TournamentsPage() {
+  return (
+    <Suspense
+      fallback={
+        <div className="global-bg min-h-screen px-0 text-white flex items-center justify-center">
+          <p className="text-sm text-muted">Loading tournaments...</p>
+        </div>
+      }
+    >
+      <TournamentsPageInner />
+    </Suspense>
+  );
+}
+
+function TournamentsPageInner() {
   const router = useRouter();
   const searchParams = useSearchParams();
 
